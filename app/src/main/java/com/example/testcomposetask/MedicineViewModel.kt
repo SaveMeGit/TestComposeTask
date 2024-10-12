@@ -45,4 +45,5 @@ class MedicineViewModel : ViewModel() {
             }
         }
     }
+
 }

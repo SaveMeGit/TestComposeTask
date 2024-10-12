@@ -43,9 +43,11 @@ fun GreetingScreen(navController: NavController, viewModel: MedicineViewModel) {
             CircularProgressIndicator()
         } else {
             LazyColumn {
-                items(medicines.size) { medicine ->
-                    MedicineCard(medicines[medicine]) {
-                        navController.navigate(Screen.MedicineDetailScreen.createRoute(medicines[medicine].toString()))
+                if (medicines != null) {
+                    items(medicines.size) { medicine ->
+                        MedicineCard(medicines[medicine]) {
+                            navController.navigate(Screen.MedicineDetailScreen.createRoute(medicines[medicine]))
+                        }
                     }
                 }
             }

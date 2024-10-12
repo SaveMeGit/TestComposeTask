@@ -10,24 +10,7 @@ import androidx.lifecycle.ViewModel
 import com.example.testcomposetask.Constants.userName
 
 class LoginViewModel : ViewModel() {
-//    private val _email = MutableStateFlow("")
-//    val email: StateFlow<String> = _email
-
-//    private val _password = MutableStateFlow("")
-//    val password: StateFlow<String> = _password
-
-//    private val _errorMessage = MutableStateFlow("")
-//    val errorMessage: StateFlow<String> = _errorMessage
-
     var credentials by mutableStateOf(Credentials())
-
-//    fun onEmailChanged(newEmail: String) {
-//        _email.value = newEmail
-//    }
-
-//    fun onPasswordChanged(newPassword: String) {
-//        _password.value = newPassword
-//    }
 
     fun updateLogin(newLogin: String) {
         credentials = credentials.copy(login = newLogin)

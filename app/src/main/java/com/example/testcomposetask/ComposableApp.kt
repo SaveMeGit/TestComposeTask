@@ -9,7 +9,7 @@ import com.example.testcomposetask.ui.MedicineDetailScreen
 import com.example.testcomposetask.ui.Screen
 
 @Composable
-fun MyApp() {
+fun ComposableApp() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = Screen.GreetingScreen.route) {
         composable(Screen.GreetingScreen.route) {

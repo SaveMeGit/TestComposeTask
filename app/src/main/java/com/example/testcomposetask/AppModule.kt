@@ -24,8 +24,4 @@ object AppModule {
         return retrofit.create(MedicineApiService::class.java)
     }
 
-//    @Provides
-//    fun provideMedicineRepository(apiService: MedicineApiService): MedicineRepository {
-//        return MedicineRepository(apiService)
-//    }
 }

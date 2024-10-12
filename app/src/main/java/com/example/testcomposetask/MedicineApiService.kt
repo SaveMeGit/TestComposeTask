@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 
 interface MedicineApiService {
-    @GET("todos/") // Use the correct endpoint
+    @GET("todos")
     fun getMedicines(): Call<List<Medicine>>
 
 }

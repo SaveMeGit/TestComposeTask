@@ -33,10 +33,6 @@ import com.example.testcomposetask.LoginViewModel
 fun LoginForm(viewModel: LoginViewModel) {
     Surface {
         val context = LocalContext.current
-//        val focusManager = LocalFocusManager.current
-//        val email by viewModel.email.collectAsState()
-//        val password by viewModel.password.collectAsState()
-//        val errorMessage by viewModel.errorMessage.collectAsState()
 
         Column(
             verticalArrangement = Arrangement.Center,

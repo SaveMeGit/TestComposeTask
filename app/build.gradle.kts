@@ -4,6 +4,7 @@ plugins {
 
     kotlin("kapt")
     alias (libs.plugins.hilt.application)
+    alias(libs.plugins.devTools.ksp)
 }
 
 android {
@@ -81,6 +82,7 @@ dependencies {
     // Room for Database
     implementation(libs.androidx.room.runtime.v251)
     kapt(libs.androidx.room.compiler.v251)
+//    ksp(libs.androidx.room.compiler.v251)
 
     // Hilt for Dependency Injection
 //    implementation(libs.hilt.android.v245)

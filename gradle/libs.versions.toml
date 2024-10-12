@@ -20,10 +20,12 @@ materialIconsExtended = "1.7.3"
 navigationCompose = "2.8.2"
 retrofit = "2.9.0"
 roomCompiler = "2.5.1"
+roomCompilerVersion = "2.5.0"
 roomRuntime = "2.6.1"
 roomRuntimeVersion = "2.5.1"
 uiTestJunit4 = "1.7.3"
 hilt = "2.45"
+ksp = "1.8.10-1.0.9"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +33,7 @@ androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 #androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-compiler-v250 = { module = "androidx.room:room-compiler", version.ref = "roomCompilerVersion" }
 androidx-room-compiler-v251 = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 #androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-runtime-v251 = { module = "androidx.room:room-runtime", version.ref = "roomRuntimeVersion" }
@@ -64,3 +67,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 #kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version = "kotlin" }
 hilt-application = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
+devTools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
