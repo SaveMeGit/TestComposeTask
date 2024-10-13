@@ -15,12 +15,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.testcomposetask.Constants
 import com.example.testcomposetask.Medicine
 
 @Composable
-fun MedicineDetailScreen(medicine: String) {
-    // You may fetch medicine details here if needed
-//    val medicine = Medicine(medicineName, "500mg", "2 times a day") // Dummy data for illustration
+fun MedicineDetailScreen() {
 
     Column(
         modifier = Modifier
@@ -33,8 +32,8 @@ fun MedicineDetailScreen(medicine: String) {
         Text(text = "Medicine Details", style = MaterialTheme.typography.headlineMedium)
         Spacer(modifier = Modifier.height(16.dp))
 
-        Text(text = "Name: ${medicine}", style = MaterialTheme.typography.bodyLarge)
-        Text(text = "Dose: ${medicine}", style = MaterialTheme.typography.bodyMedium)
-        Text(text = "Strength: ${medicine}", style = MaterialTheme.typography.bodySmall)
+        Text(text = "Name: ${Constants.medicineName}", style = MaterialTheme.typography.bodyLarge)
+        Text(text = "Dose: ${Constants.medicineDose}", style = MaterialTheme.typography.bodyMedium)
+        Text(text = "Strength: ${Constants.medicineStrength}", style = MaterialTheme.typography.bodySmall)
     }
 }

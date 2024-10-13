@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.testcomposetask.ui.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_greetingsFragment"
+            app:destination="@id/greetingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/greetingsFragment"
+        android:name="com.example.testcomposetask.ui.GreetingsFragment"
+        tools:layout="@layout/fragment_greetings">
+        <action
+            android:id="@+id/action_greetingsFragment_to_medicineDetailsFragment"
+            app:destination="@id/medicineDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/medicineDetailsFragment"
+        android:name="com.example.testcomposetask.ui.MedicineDetailsFragment"
+        tools:layout="@layout/fragment_medicine_details" />
+</navigation>

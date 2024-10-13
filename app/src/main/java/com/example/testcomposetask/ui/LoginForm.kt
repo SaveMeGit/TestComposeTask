@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
-
 package com.example.testcomposetask.ui
 
 import androidx.compose.foundation.layout.Arrangement
@@ -26,11 +24,13 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.testcomposetask.LoginViewModel
 
 @Composable
-fun LoginForm(viewModel: LoginViewModel) {
+fun LoginForm(viewModel: LoginViewModel, findNavController: NavController) {
     Surface {
         val context = LocalContext.current
 
@@ -50,7 +50,7 @@ fun LoginForm(viewModel: LoginViewModel) {
                 value = viewModel.credentials.pwd,
                 onChange = { viewModel.updatePassword(it) },
                 submit = {
-                    viewModel.login(context)
+                    viewModel.login(context, findNavController)
                 },
                 modifier = Modifier.fillMaxWidth()
             )
@@ -60,7 +60,7 @@ fun LoginForm(viewModel: LoginViewModel) {
 
             Button(
                 onClick = {
-                    viewModel.login(context)
+                    viewModel.login(context, findNavController)
                 },
                 enabled = viewModel.credentials.isNotEmpty(),
                 shape = RoundedCornerShape(5.dp),

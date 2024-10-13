@@ -10,9 +10,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.testcomposetask.Constants
 import com.example.testcomposetask.MedicineViewModel
+import com.example.testcomposetask.R
 
 @Composable
-fun GreetingScreen(navController: NavController, viewModel: MedicineViewModel) {
+fun GreetingScreen(viewModel: MedicineViewModel, findNavController: NavController) {
     val medicines = viewModel.medicines
     val isLoading by remember { viewModel.isLoading }
 
@@ -43,11 +44,9 @@ fun GreetingScreen(navController: NavController, viewModel: MedicineViewModel) {
             CircularProgressIndicator()
         } else {
             LazyColumn {
-                if (medicines != null) {
-                    items(medicines.size) { medicine ->
-                        MedicineCard(medicines[medicine]) {
-                            navController.navigate(Screen.MedicineDetailScreen.createRoute(medicines[medicine]))
-                        }
+                items(medicines.size) { medicine ->
+                    MedicineCard(medicines[medicine]) {
+                        findNavController.navigate(R.id.action_greetingsFragment_to_medicineDetailsFragment)
                     }
                 }
             }
