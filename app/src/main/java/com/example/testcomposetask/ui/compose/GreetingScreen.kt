@@ -1,4 +1,4 @@
-package com.example.testcomposetask.ui
+package com.example.testcomposetask.ui.compose
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn

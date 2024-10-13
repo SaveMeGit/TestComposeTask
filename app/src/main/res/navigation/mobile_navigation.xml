@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.testcomposetask.ui.LoginFragment"
+        android:name="com.example.testcomposetask.ui.fragments.LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_greetingsFragment"
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/greetingsFragment"
-        android:name="com.example.testcomposetask.ui.GreetingsFragment"
+        android:name="com.example.testcomposetask.ui.fragments.GreetingsFragment"
         tools:layout="@layout/fragment_greetings">
         <action
             android:id="@+id/action_greetingsFragment_to_medicineDetailsFragment"
@@ -25,6 +25,6 @@
 
     <fragment
         android:id="@+id/medicineDetailsFragment"
-        android:name="com.example.testcomposetask.ui.MedicineDetailsFragment"
+        android:name="com.example.testcomposetask.ui.fragments.MedicineDetailsFragment"
         tools:layout="@layout/fragment_medicine_details" />
 </navigation>

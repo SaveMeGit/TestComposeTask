@@ -1,4 +1,4 @@
-package com.example.testcomposetask.ui
+package com.example.testcomposetask.ui.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.testcomposetask.Constants
-import com.example.testcomposetask.Medicine
 
 @Composable
 fun MedicineDetailScreen() {

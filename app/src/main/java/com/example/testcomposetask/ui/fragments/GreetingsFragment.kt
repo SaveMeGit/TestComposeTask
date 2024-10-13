@@ -1,4 +1,4 @@
-package com.example.testcomposetask.ui
+package com.example.testcomposetask.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.testcomposetask.MedicineViewModel
 import com.example.testcomposetask.databinding.FragmentGreetingsBinding
+import com.example.testcomposetask.ui.compose.GreetingScreen
 
 class GreetingsFragment : Fragment() {
     private val binding: FragmentGreetingsBinding by lazy { FragmentGreetingsBinding.inflate(layoutInflater) }
